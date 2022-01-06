@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class MoveAnimal : MonoBehaviour
 {
-    public virtual void Mueve()
+    protected virtual void Mueve()
     {
         transform.Translate(Vector3.right * 10 * Time.deltaTime);
     }
