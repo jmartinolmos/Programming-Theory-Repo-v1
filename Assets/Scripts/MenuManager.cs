@@ -8,23 +8,10 @@ using TMPro;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
-{
-    public static MenuManager Instance;
-
+{  
     [SerializeField] TMP_InputField namePlayer;
     [SerializeField] TextMeshProUGUI errorTxt;
-
-    private void Awake()
-    {        
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
+    
     public void StartGame()
     {   
         
