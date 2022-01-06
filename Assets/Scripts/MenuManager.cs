@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {  
-    [SerializeField] TMP_InputField namePlayer;
+    public TMP_InputField namePlayer;
     [SerializeField] TextMeshProUGUI errorTxt;
     
     public void StartGame()
@@ -21,6 +21,7 @@ public class MenuManager : MonoBehaviour
             return;
         }
 
+        MainManager.Instance.username = namePlayer.text;        
         errorTxt.gameObject.SetActive(false);
         SceneManager.LoadScene(1);       
     }

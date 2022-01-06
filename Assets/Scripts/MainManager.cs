@@ -8,6 +8,8 @@ public class MainManager : MonoBehaviour
 {
     public static MainManager Instance;
 
+    public string username { get; set; }  
+
     private void Awake()
     {
         if (Instance != null)
